@@ -7,7 +7,9 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "babel-cli": "6.24.1",
@@ -27,6 +29,8 @@
     "style-loader": "0.18.2",
     "validator": "8.0.0",
     "webpack": "3.1.0",
-    "webpack-dev-server": "2.5.1"
-  }
+    "webpack-dev-server": "2.5.1",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
